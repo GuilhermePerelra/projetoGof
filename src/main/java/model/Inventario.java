@@ -2,24 +2,23 @@ package model;
 
 import interfaces.IInventario;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Inventario implements IInventario {
     private Long id;
-    private List<Item> items;
+    private List<Item> itens;
 
-    public Inventario(List<Item> items) {
-        this.items = items;
+    public Inventario(List<Item> itens) {
+        this.itens = itens;
     }
 
     @Override
-    public int pesoTotal() {
-        return 0;
+    public int pesoTotal(){
+
+        return itens.stream()
+                .mapToInt(Item::getPeso)
+                .sum();
+
     }
 
-    @Override
-    public int precoTotal() {
-        return 0;
-    }
 }

@@ -1,7 +1,11 @@
 package model;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Item {
     private Long id;
     private String nome;
@@ -13,4 +17,6 @@ public class Item {
         this.preco = preco;
         this.nome = nome;
     }
+
+
 }
