@@ -1,6 +1,5 @@
 package model;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +16,4 @@ public class Item {
         this.preco = preco;
         this.nome = nome;
     }
-
-
 }
